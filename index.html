@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Games</title>
+
+    <style>
+      body {
+        background-image: url("images/mainBG.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .card {
+        background: linear-gradient(189deg, #ff73c2, #14e5ff);
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        animation: slideInRight 0.5s ease forwards;
+        transform: translateX(100%);
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .game-card {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .game-card-tic-tac-toe:hover {
+        background-color: red;
+      }
+
+      .game-card-stone-paper-scissors:hover {
+        background-color: blue;
+      }
+
+      @keyframes slideInRight {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto">
+      <div class="max-w-lg">
+        <div class="card overflow-hidden">
+          <div class="p-6 bg-transparent text-white">
+            <h2 class="text-3xl text-center font-bold mb-4">Choose a Game</h2>
+            <div class="grid grid-cols-2 gap-4">
+              <a
+                href="ticTacToeGame/tec.html"
+                class="game-card game-card-tic-tac-toe bg-blue-500 transition duration-300 ease-in-out p-4 rounded-lg block text-center"
+              >
+                <h3 class="text-lg font-semibold">Tic Tac Toe</h3>
+              </a>
+              <a
+                href="rockPaperScissorGame/rps.html"
+                class="game-card game-card-stone-paper-scissors bg-green-500 transition duration-300 ease-in-out p-4 rounded-lg block text-center"
+              >
+                <h3 class="text-lg font-semibold">Stone Paper Scissors</h3>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
