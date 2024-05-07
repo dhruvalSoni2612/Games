@@ -99,3 +99,9 @@ body {
 .js-Xcolor {
   color: #d0fb05;
 }
+
+@media screen and (max-width: 500px) {
+  .game {
+    margin-top: 8rem;
+  }
+}
